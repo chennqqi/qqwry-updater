@@ -1,5 +1,7 @@
 package updater
 
+// 原理参见: http://microcai.org/2014/05/11/qqwry_dat_download.html
+
 import (
 	"bytes"
 	"compress/zlib"
