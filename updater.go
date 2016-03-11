@@ -9,7 +9,6 @@ import (
 	"errors"
 	"io/ioutil"
 	"net/http"
-	"strings"
 )
 
 var (
@@ -18,12 +17,6 @@ var (
 )
 
 func getContent(url string) (b []byte, err error) {
-	if strings.Contains(url, "copywrite.rar") {
-		return ioutil.ReadFile("copywrite.rar")
-	}
-	if strings.Contains(url, "qqwry.rar") {
-		return ioutil.ReadFile("qqwry.rar")
-	}
 	resp, err := http.Get(url)
 	if err != nil {
 		return
